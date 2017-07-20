@@ -8,7 +8,14 @@ describe("List", function() {
 
   describe('Check list at initialisation', function() {
     it("Should return empty multi-dimensional list", function() {
-      expect(list.viewList()).toEqual([new Array(5)]);
+      expect(list.viewList()).toEqual([]);
+    });
+  });
+
+  describe('Add element to array', function() {
+    it("Should return new list", function() {
+      list.addElementToList("Apples", "1.00", "Imported from Africa")
+      expect(list.viewList()).toEqual([[1, "Apples", "1.00", "Imported from Africa"]]);
     });
   });
 });
