@@ -35,4 +35,15 @@ describe("List", function() {
       expect(list.viewList()).toEqual([[1, "Apples", "1.50", "Imported from Africa"]]);
     });
   });
+
+  describe('Display List', function() {
+    it("Should return list", function() {
+      list.addElementToList("Apples", "1.00", "Imported from Africa")
+      list.addElementToList("Banana", "2.00", "Imported from EU")
+      expect(list.viewList()).toEqual([
+          [1, "Apples", "1.00", "Imported from Africa"],
+          [2, "Banana", "2.00", "Imported from EU"]
+        ]);
+    });
+  });
 });
