@@ -6,7 +6,9 @@ describe("List", function() {
     list = new List();
   });
 
-  it("should return name", function() {
-    expect(list.viewName()).toEqual([["id","name","price","description"]]);
+  describe('Check list at initialisation', function() {
+    it("Should return empty multi-dimensional list", function() {
+      expect(list.viewList()).toEqual([new Array(5)]);
+    });
   });
 });
