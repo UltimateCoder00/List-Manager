@@ -12,10 +12,19 @@ describe("List", function() {
     });
   });
 
-  describe('Add element to array', function() {
+  describe('Add element to List', function() {
     it("Should return new list", function() {
       list.addElementToList("Apples", "1.00", "Imported from Africa")
       expect(list.viewList()).toEqual([[1, "Apples", "1.00", "Imported from Africa"]]);
+    });
+  });
+
+  describe('Delete element from List', function() {
+    it("Should return new list", function() {
+      list.addElementToList("Apples", "1.00", "Imported from Africa")
+      list.addElementToList("Banana", "2.00", "Imported from EU")
+      list.removeElementFromList(1)
+      expect(list.viewList()).toEqual([[2, "Banana", "2.00", "Imported from EU"]]);
     });
   });
 });
