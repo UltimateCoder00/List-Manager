@@ -27,4 +27,12 @@ describe("List", function() {
       expect(list.viewList()).toEqual([[2, "Banana", "2.00", "Imported from EU"]]);
     });
   });
+
+  describe('Edit element in List', function() {
+    it("Should return new list", function() {
+      list.addElementToList("Apples", "1.00", "Imported from Africa")
+      list.editElementInList(1, "Apples", "1.50", "Imported from Africa")
+      expect(list.viewList()).toEqual([[1, "Apples", "1.50", "Imported from Africa"]]);
+    });
+  });
 });
